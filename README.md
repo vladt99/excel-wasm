@@ -25,6 +25,8 @@
     alt='Stars' />  
 </a>
 
+> **Note:** This fork is maintained by [@vladt99](https://github.com/vladt99) and includes WASM support for Flutter Web.
+
 ### [Excel](https://www.pub.dev/packages/excel) is a flutter and dart library for reading, creating and updating excel-sheets for XLSX files.
 
 ## Road-map:
@@ -247,26 +249,26 @@ sheetObject.removeRow(80);
 
 ### Cell-Style Options
 
-| key                | description                                                                                                                             |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| fontFamily         | eg. getFontFamily(`FontFamily.Arial`) or getFontFamily(`FontFamily.Comic_Sans_MS`) `There is total 182 Font Families available for now` |
-| fontSize           | specify the font-size as integer eg. fontSize = 15                                                                                      |
-| bold               | makes text bold - when set to `true`, by-default it is set to `false`                                                                   |
-| italic             | makes text italic - when set to `true`, by-default it is set to `false`                                                                 |
-| underline          | Gives underline to text `enum Underline { None, Single, Double }` eg. Underline.Single, by-default it is set to Underline.None          |
-| fontColorHex       | Font Color eg. '#0000FF'                                                                                                                |
-| rotation (degree)  | rotation of text eg. 50, rotation varies from `-90 to 90`, with including `90` and `-90`                                                |
-| backgroundColorHex | Background color of cell eg. '#faf487'                                                                                                  |
-| wrap               | Text wrapping `enum TextWrapping { WrapText, Clip }` eg. TextWrapping.Clip                                                              |
-| verticalAlign      | align text vertically `enum VerticalAlign { Top, Center, Bottom }` eg. VerticalAlign.Top                                                |
-| horizontalAlign    | align text horizontally `enum HorizontalAlign { Left, Center, Right }` eg. HorizontalAlign.Right                                        |
-| leftBorder         | the left border of the cell (see below)                                                                                                 |
-| rightBorder        | the right border of the cell                                                                                                            |
-| topBorder          | the top border of the cell                                                                                                              |
-| bottomBorder       | the bottom border of the cell                                                                                                           |
-| diagonalBorder     | the diagonal "border" of the cell                                                                                                       |
-| diagonalBorderUp   | boolean value indicating if the diagonal "border" should be displayed on the up diagonal                                                |
-| diagonalBorderDown | boolean value indicating if the diagonal "border" should be displayed on the down diagonal                                              |
+| key                | description                                                                                                                                                                                                                                                                      |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| fontFamily         | eg. getFontFamily(`FontFamily.Arial`) or getFontFamily(`FontFamily.Comic_Sans_MS`) `There is total 182 Font Families available for now`                                                                                                                                          |
+| fontSize           | specify the font-size as integer eg. fontSize = 15                                                                                                                                                                                                                               |
+| bold               | makes text bold - when set to `true`, by-default it is set to `false`                                                                                                                                                                                                            |
+| italic             | makes text italic - when set to `true`, by-default it is set to `false`                                                                                                                                                                                                          |
+| underline          | Gives underline to text `enum Underline { None, Single, Double }` eg. Underline.Single, by-default it is set to Underline.None                                                                                                                                                   |
+| fontColorHex       | Font Color eg. '#0000FF'                                                                                                                                                                                                                                                         |
+| rotation (degree)  | rotation of text eg. 50, rotation varies from `-90 to 90`, with including `90` and `-90`                                                                                                                                                                                         |
+| backgroundColorHex | Background color of cell eg. '#faf487'                                                                                                                                                                                                                                           |
+| wrap               | Text wrapping `enum TextWrapping { WrapText, Clip }` eg. TextWrapping.Clip                                                                                                                                                                                                       |
+| verticalAlign      | align text vertically `enum VerticalAlign { Top, Center, Bottom }` eg. VerticalAlign.Top                                                                                                                                                                                         |
+| horizontalAlign    | align text horizontally `enum HorizontalAlign { Left, Center, Right }` eg. HorizontalAlign.Right                                                                                                                                                                                 |
+| leftBorder         | the left border of the cell (see below)                                                                                                                                                                                                                                          |
+| rightBorder        | the right border of the cell                                                                                                                                                                                                                                                     |
+| topBorder          | the top border of the cell                                                                                                                                                                                                                                                       |
+| bottomBorder       | the bottom border of the cell                                                                                                                                                                                                                                                    |
+| diagonalBorder     | the diagonal "border" of the cell                                                                                                                                                                                                                                                |
+| diagonalBorderUp   | boolean value indicating if the diagonal "border" should be displayed on the up diagonal                                                                                                                                                                                         |
+| diagonalBorderDown | boolean value indicating if the diagonal "border" should be displayed on the down diagonal                                                                                                                                                                                       |
 | numberFormat       | a subtype of ```NumFormat``` to style the CellValue displayed, use default formats such as ```NumFormat.standard_34``` or create your own using ```CustomNumericNumFormat('#,##0.00 \\m\\²')``` ```CustomDateTimeNumFormat('m/d/yy h:mm')```  ```CustomTimeNumFormat('mm:ss')``` |
 
 ### Borders
