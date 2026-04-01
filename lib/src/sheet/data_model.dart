@@ -113,8 +113,9 @@ sealed class CellValue {
 
 class FormulaCellValue extends CellValue {
   final String formula;
+  final String? cachedResult;
 
-  const FormulaCellValue(this.formula);
+  const FormulaCellValue(this.formula, {this.cachedResult});
 
   @override
   String toString() {
@@ -122,11 +123,13 @@ class FormulaCellValue extends CellValue {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, formula);
+  int get hashCode => Object.hash(runtimeType, formula, cachedResult);
 
   @override
   operator ==(Object other) {
-    return other is FormulaCellValue && other.formula == formula;
+    return other is FormulaCellValue &&
+        other.formula == formula &&
+        other.cachedResult == cachedResult;
   }
 }
 

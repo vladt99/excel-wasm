@@ -100,6 +100,9 @@ class Save {
             : value.formula;
         children = [
           XmlElement(XmlName('f'), [], [XmlText(formulaText)]),
+          if (value.cachedResult != null)
+            XmlElement(
+                XmlName('v'), [], [XmlText(value.cachedResult!)]),
         ];
       case IntCellValue():
         final String v = switch (numberFormat) {
