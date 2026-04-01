@@ -60,6 +60,7 @@ class Save {
       XmlAttribute(XmlName('r'), rC),
       if (value is TextCellValue) XmlAttribute(XmlName('t'), 's'),
       if (value is BoolCellValue) XmlAttribute(XmlName('t'), 'b'),
+      if (value is FormulaCellValue) XmlAttribute(XmlName('t'), 'str'),
     ];
 
     final cellStyle =
@@ -94,9 +95,11 @@ class Save {
       case null:
         children = [];
       case FormulaCellValue():
+        final formulaText = value.formula.startsWith('=')
+            ? value.formula.substring(1)
+            : value.formula;
         children = [
-          XmlElement(XmlName('f'), [], [XmlText(value.formula)]),
-          XmlElement(XmlName('v'), [], [XmlText('')]),
+          XmlElement(XmlName('f'), [], [XmlText(formulaText)]),
         ];
       case IntCellValue():
         final String v = switch (numberFormat) {
